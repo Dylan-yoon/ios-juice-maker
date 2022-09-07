@@ -10,7 +10,7 @@ enum Juice: String {
     case pineApple = "파인애플쥬스"
     case strawBerryBanana = "딸바쥬스"
     case mango = "망고쥬스"
-    case mangoKiwi = "망키쥬스"
+    case mangoKiwi = "망키쥬스" 
     
     var recipe: [Fruit: Int] {
         switch self {

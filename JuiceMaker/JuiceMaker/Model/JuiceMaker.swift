@@ -4,7 +4,7 @@
 //
 
 struct JuiceMaker {
-    private let store = FruitStore()
+    let store = FruitStore()
     
     func makeJuice(_ juice: Juice) {
         if requestStockAvailability(for: juice) {
@@ -17,6 +17,7 @@ struct JuiceMaker {
             try store.checkStockAvailability(of: juice)
             return true
         } catch StockError.notEnoughFruit {
+            //여기에 kvo?
             print("재고 부족")
         } catch StockError.outOfFruit {
             print("재고 없음")
